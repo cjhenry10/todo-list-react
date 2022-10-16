@@ -1,0 +1,6 @@
+.categories {
+    background-color: #edffff;
+    margin: .25rem .25rem 0 .25rem;
+    height: 3.25rem;
+    display: flex;
+}

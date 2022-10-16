@@ -1,0 +1,12 @@
+.todo-list {
+    --color1: #edffff;
+  --color2: #87a7d7;
+  --color3: #516792;
+  --color4: #182249;
+  --color5: #0a0e1fea;
+    /* background-color: var(--color5); */
+    color: var(--color1);
+    margin: 0 .25rem;
+    border-radius: .25rem;
+    max-width: 1080px;
+}

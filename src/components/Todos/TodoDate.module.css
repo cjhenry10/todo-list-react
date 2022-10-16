@@ -1,0 +1,13 @@
+.due-soon {
+    color: hsl(60, 100%, 70%);
+}
+
+.due-today {
+    color: hsl(39, 100%, 70%);
+    font-style: italic;
+}
+
+.overdue {
+    color: hsl(0, 100%, 70%);
+    font-style: oblique;
+}

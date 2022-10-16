@@ -1,0 +1,148 @@
+.navbar {
+  /* colors */
+  --color1: #edffff;
+  --color2: #87a7d7;
+  --color3: #516792;
+  --color4: #182249;
+  --color5: #0a0e1f;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* justify-content: start; */
+    align-items: top;
+    background-color: var(--color5);
+    color: var(--color1);
+    height: 100vh;
+    /* overflow-y: scroll; */
+    width: 2.75rem;
+    transition: width 200ms ease;
+    padding: 0 .125rem;
+    animation: close 300ms ease;
+    z-index: 500;
+}
+
+.no-transitions {
+  transition: none !important;
+  animation: none !important;
+}
+
+.toggle-button {
+    padding: .6rem;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+  backdrop-filter: brightness(150%);
+}
+
+.light .toggle-button:hover {
+  backdrop-filter: brightness(90%);
+
+}
+
+.toggle-button .bar {
+    /* display: block; */
+    height: 2px;
+    width: 100%;
+    background-color: #ECEFF4;
+    /* background-color: green; */
+    border-radius: 10px;
+}
+
+.divider {
+    display: inline-block;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #898a8d;
+    width: 80%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+  height: 3.25rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  color: var(--color1);
+  margin: .3rem;
+  padding: .3rem;
+  height: 2rem;
+  max-height: 2rem;
+  /* padding-left: .45rem; */
+}
+
+.nav-link:hover {
+  /* color: hsl(249, 16%, 85%); */
+  filter: brightness(90%);
+}
+
+.link-text {
+  /* display: none; */
+  visibility: hidden;
+  transition: opacity 1000ms ease;
+  -webkit-transition: opacity 1s ease;
+  opacity: 0;
+  margin-left: auto;
+}
+
+.navbar.active {
+  width: 12rem;
+  animation: open 300ms ease;
+}
+
+.link-text.active {
+  display: block;
+  visibility: visible;
+  transition: opacity 200ms ease;
+  -webkit-transition: opacity 200ms ease;
+  opacity: 1;
+}
+
+@keyframes open {
+  0% {
+    width: 3rem;
+  }
+  80% {
+    width: 13rem;
+  }
+  100% {
+    width: 12rem;
+  }
+}
+
+@keyframes close {
+  0% {
+    width: 12rem;
+  }
+  15% {
+    width: 13rem;
+  }
+  30% {
+    width: 12rem;
+  }
+  100% {
+    width: 3rem;
+  }
+}

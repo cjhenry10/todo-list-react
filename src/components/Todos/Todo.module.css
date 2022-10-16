@@ -1,0 +1,53 @@
+.todo {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 5px 5px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    /* max-height: 3rem; */
+    opacity: 1;
+    transition: opacity 500ms ease;
+    background-color: #0a0e1f;
+    font-size: 14px;
+}
+.todo > * {
+    padding: .75rem;
+}
+
+.todo.completed {
+    opacity: 0.5;
+}
+
+.todo-text {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.todo-info {
+    flex: 5 0 80%;
+}
+
+.todo-categories {
+    flex: 1 0 10%;
+}
+
+.todo-due {
+    flex: 0 0 auto;
+    outline: 1px white solid;
+}
+
+.todo-buttons {
+    flex: 0 0 auto;
+    outline: 1px white solid;
+}
+
+.todo-buttons button {
+    border: solid 1px white;
+    background-color: transparent;
+    color: inherit;
+    border-radius: .25rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    cursor: pointer;
+}

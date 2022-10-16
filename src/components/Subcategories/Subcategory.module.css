@@ -1,0 +1,13 @@
+.button {
+    margin: .5rem .125rem;
+    padding: .25rem .5rem;
+    min-width: 2.5rem;
+    background-color: #182249;
+    color: #edffff;
+    border: none;
+    border-radius: .25rem;
+}
+
+.button.active {
+    background-color: #516792;
+}
