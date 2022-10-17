@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Button from '../UI/Button';
 import styles from './Category.module.css';
 
 const Category = (props) => {
@@ -13,7 +14,8 @@ const Category = (props) => {
   
 
   return (
-    <button className={buttonClasses}>{props.name}</button>
+    <Button variant='contained' className={buttonClasses}>{props.name}</Button>
+    // <button className={buttonClasses}>{props.name}</button>
   )
 }
 

@@ -1,10 +1,5 @@
 .navbar {
-  /* colors */
-  --color1: #edffff;
-  --color2: #87a7d7;
-  --color3: #516792;
-  --color4: #182249;
-  --color5: #0a0e1f;
+  
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -12,8 +7,8 @@
     left: 0;
     /* justify-content: start; */
     align-items: top;
-    background-color: var(--color5);
-    color: var(--color1);
+    background-color: var(--base1);
+    color: var(--white);
     height: 100vh;
     /* overflow-y: scroll; */
     width: 2.75rem;
@@ -21,6 +16,7 @@
     padding: 0 .125rem;
     animation: close 300ms ease;
     z-index: 500;
+    border-right: solid 1px var(--base3)
 }
 
 .no-transitions {
@@ -62,7 +58,7 @@
     display: inline-block;
     height: 1px;
     margin: 0 auto;
-    background-color: #898a8d;
+    background-color: var(--base3);
     width: 80%;
 }
 

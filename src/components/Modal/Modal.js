@@ -10,8 +10,8 @@ const Backdrop = (props) => {
 const Modal = (props) => {
   return (
     <>
-    <Backdrop onClick={props.onCancel} />
-    <div>{props.children}</div>
+    <Backdrop onClick={()=>{props.setShowModal(false)}} />
+    <div className={styles.modal}>{props.children}</div>
     </>
   )
 }

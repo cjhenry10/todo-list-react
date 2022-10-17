@@ -2,9 +2,10 @@ import React from 'react';
 import styles from './TodoDate.module.css';
 
 const TodoDate = (props) => {
-    const month = props.date.toLocaleString('en-US', { month: 'long' });
+    const dow = props.date.toLocaleString('en-US', {weekday: 'short'});
+    const month = props.date.toLocaleString('en-US', { month: 'short' });
     const day = props.date.toLocaleString('en-US', { day: '2-digit', timezone: 'America/New_York' });
-    const year = props.date.getFullYear();
+    const year = props.date.toLocaleString('en-US', {year: 'numeric'});
     const todayNum = Math.ceil(new Date() / (1000*60*60*24));
     const dueDateNum = Math.ceil(props.date / (1000*60*60*24));
     const timeLeft = dueDateNum - todayNum;
@@ -31,7 +32,7 @@ const TodoDate = (props) => {
     }
   return (
     <>
-    <h4>{month} {day}, {year}</h4>
+    <h4>{dow}, {month} {day}, {year}</h4>
     <div className={dateClasses}>{dateMessage}</div>
     </>
   )

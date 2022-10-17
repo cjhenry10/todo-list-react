@@ -1,4 +1,10 @@
 .navbar {
+  /* colors */
+  --color1: #edffff;
+  --color2: #87a7d7;
+  --color3: #516792;
+  --color4: #182249;
+  --color5: #0a0e1f;
     display: flex;
     flex-direction: column;
     position: fixed;

@@ -13,7 +13,7 @@ const testTodos = [{
 {
   title: 'test todo 2',
   details: 'dsklufghsduijfvnjfkd',
-  dueDate: new Date(2022, 8, 20),
+  dueDate: new Date(2022, 9, 20),
   priority: 0,
   completed: false,
   category: 'kdhgdg',
@@ -64,7 +64,7 @@ const TodoContextProvider = (props) => {
     const [todoListState, dispatchTodoAction] = useReducer(todoReducer, defaultTodoState);
 
     const handleAddTask = (task) => {
-        dispatchTodoAction({type: 'ADD', task: task})
+        dispatchTodoAction({type: 'ADD', task: task});
     }
     
     const handleRemoveTask = (title) => {

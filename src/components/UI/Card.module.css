@@ -1,0 +1,10 @@
+.card {
+    background: hsl(249, 16%, 90%);
+    display: inline-block;
+    /* width: clamp(50vw, 600px, 75vw); */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    /* height: 200px; */
+    border-radius: 0.25em;
+    margin: 1vh auto;
+    padding: 1rem;
+}

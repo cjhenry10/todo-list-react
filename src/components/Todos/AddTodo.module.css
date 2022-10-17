@@ -1,0 +1,43 @@
+.add-todo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    column-gap: 2%;
+    max-width: 800px;
+}
+
+.add-todo > *{
+    flex: 1 1 48%;
+}
+
+.add-todo .controls {
+    flex: 0 1 98%;
+}
+
+@media (max-width: 850px) {
+    .add-todo > *{
+        flex: 1 0 100%;
+    }
+    .add-todo :nth-child(1) {
+        order: 1;
+    }
+    .add-todo :nth-child(3) {
+        order: 2;
+    }
+    .add-todo :nth-child(5) {
+        order: 3;
+    }
+    .add-todo :nth-child(2) {
+        order: 4;
+    }
+    .add-todo :nth-child(4) {
+        order: 5;
+    }
+    .add-todo :nth-child(6) {
+        order: 6;
+    }
+    .add-todo .controls {
+        order: 7;
+    }
+}

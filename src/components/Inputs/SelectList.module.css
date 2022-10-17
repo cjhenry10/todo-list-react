@@ -1,0 +1,23 @@
+.select {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .select label {
+    font-weight: bold;
+    /* margin-right: 1rem; */
+  }
+  
+  .select select {
+    width: clamp(150px, 15vw, 200px);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font: inherit;
+    padding-left: 0.5rem;
+    margin-left: auto;
+  }
+
+  .select select option:first {
+    color: #999;
+  }

@@ -7,6 +7,7 @@ import {
   BsCheckCircleFill,
 } from 'react-icons/bs';
 import { IconContext } from 'react-icons/lib';
+import Modal from '../Modal/Modal';
 
 const dummyLinks = ['Add Category', 'Add Subcategory', 'Add Task'];
 const icons = [
@@ -15,13 +16,29 @@ const icons = [
   <BsCheckCircleFill size={24} />,
 ];
 
-const Nav = () => {
+
+const Nav = ({setShowModal}) => {
   const [navClasses, setNavClasses] = useState(
     `${styles.navbar} ${styles['no-transitions']}`
   );
   const [linkClasses, setLinkClasses] = useState(`${styles['link-text']}`);
 
   const navRef = useRef();
+
+  const handleNewTask = () => {
+    setShowModal(true);
+    setLinkClasses(`${styles['link-text']}`);
+    setNavClasses(styles.navbar);
+
+  }
+  const handleNewCategory = () => {
+    setShowModal(true);
+  }
+  const handleNewSubcategory = () => {
+    setShowModal(true);
+  }
+
+  const onClicks = [handleNewCategory, handleNewSubcategory, handleNewTask]
 
   let timer;
 
@@ -57,6 +74,8 @@ const Nav = () => {
     };
   }, [navRef, linkClasses]);
 
+
+
   return (
     <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
       <nav ref={navRef} className={navClasses}>
@@ -70,7 +89,7 @@ const Nav = () => {
         <ul className={styles['navbar-nav']}>
           {dummyLinks.map((link) => {
             return (
-              <li key={link} className={styles['nav-item']}>
+              <li key={link} className={styles['nav-item']} onClick={onClicks[dummyLinks.indexOf(link)]}>
                 <Link className={styles['nav-link']}>
                   <span className={styles['nav-icon']}>
                     {icons[dummyLinks.indexOf(link)]}

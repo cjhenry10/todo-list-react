@@ -1,23 +1,23 @@
 .top-bar {
-    --color1: #edffff;
+    /* --color1: #edffff;
   --color2: #87a7d7;
   --color3: #516792;
   --color4: #182249;
-  --color5: #0a0e1f;
-    background-color: var(--color5);
+  --color5: #0a0e1f; */
+    background-color: var(--base1);
     height: 24px;
     /* width: 100%; */
-    padding: .6rem;
+    padding: .55rem;
     /* border-bottom: 1px solid white; */
     /* box-shadow: 0 2px 1px -2px #898a8d; */
-    outline: 1px solid #898a8d;
+    outline: 1px solid var(--base3);
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
 .search-icon svg {
-    fill: var(--color1);
+    fill: var(--white);
 }
 
 .search {
